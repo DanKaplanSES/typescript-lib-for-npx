@@ -1,0 +1,32 @@
+{
+  "name": "typescript-lib-for-npx",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "echo \"lint\" && eslint 'src/**' --fix && echo \"tsc\" && tsc",
+    "test": "npm run build && node ./node_modules/jest/bin/jest.js --runInBand"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.6",
+    "jest-extended": "^0.11.5",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "4.3.5"
+  },
+  "bin": {
+    "typescript-lib-for-npx": "dist/index.js"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.172",
+    "lodash": "^4.17.21"
+  }
+}

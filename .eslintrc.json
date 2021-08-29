@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": false,
+    "jasmine": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "State": "writable",
+    "setup": "writable"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "quotes": ["off"],
+    "no-plusplus": ["off"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"],
+        "@typescript-eslint/no-empty-function": ["off"],
+        "@typescript-eslint/camelcase": ["off"],
+        "@typescript-eslint/triple-slash-reference": ["off"],
+        "@typescript-eslint/no-unused-vars": ["off"],
+        "@typescript-eslint/no-non-null-assertion": ["off"],
+        "@typescript-eslint/no-non-null-asserted-optional-chain": ["off"]
+      }
+    }
+  ]
+}
